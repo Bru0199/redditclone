@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #ffffff;
+  --color-header: #f6f7f8;
+  --color-card: #ffffff;
+  --color-text: #1a1a1b;
+  --color-muted-text: #878a8c;
+  --color-border: #d3d3d3;
+
+  --reddit-orange: #ff4500;
+  --reddit-blue: #0079d3;
+  --google-blue: #4285f4;
+
+  --color-input-bg: #ffffff;
+  --color-input-text: #1a1a1b;
+  --color-placeholder: #878a8c;
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+      --reddit-lightgray: #1A1A1B;
+      --reddit-dark: #ffffff;
+      --reddit-mediumgray: #A5A5A5;
+    }
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #1a1a1b;
+    --color-header: #2a2a2b;
+    --color-card: #1a1a1b;
+    --color-text: #ffffff;
+    --color-muted-text: #a0a0a0;
+    --color-border: #3a3a3b;
+
+    --reddit-orange: #ff4500;
+    --reddit-blue: #5b9eff;
+    --google-blue: #8ab4f8;
+
+    --color-input-bg: #2a2a2b;
+    --color-input-text: #ffffff;
+    --color-placeholder: #a0a0a0;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    
+  }
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components{
+  .icon{
+    @apply h-6 w-6 lg:w-9 cursor-pointer rounded-sm lg:p-1 lg:hover:bg-gray-100 text-black
+  }
+}
+
+@layer utilities {
+  .bg-page {
+    background-color: var(--color-bg);
+  }
+
+  .bg-header {
+    background-color: var(--color-header);
+  }
+
+  .bg-card {
+    background-color: var(--color-card);
+  }
+
+  .text-main {
+    color: var(--color-text);
+  }
+
+  .text-muted {
+    color: var(--color-muted-text);
+  }
+
+  .border-default {
+    border-color: var(--color-border);
+  }
+
+  .bg-reddit-orange {
+    background-color: var(--reddit-orange);
+  }
+
+  .text-reddit-blue {
+    color: var(--reddit-blue);
+  }
+
+  .bg-google-blue {
+    background-color: var(--google-blue);
+  }
+
+  .bg-input {
+    background-color: var(--color-input-bg);
+  }
+
+  .text-input {
+    color: var(--color-input-text);
+  }
+
+  .placeholder-custom::placeholder {
+    color: var(--color-placeholder);
+  }
+}
