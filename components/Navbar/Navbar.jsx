@@ -11,7 +11,8 @@ const Navbar = () => {
     {/* <Directories/> */}
     <SearchInput/>
     <RightContent/>
-    </div> 
+    </div>
+
   )
 }
 
